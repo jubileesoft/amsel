@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format ist based on [Keep a Changelog](https://keepachangelog.com) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## <span style="color: #0366d6;">0.1.3</span>
+
+Release date: 2020-05-20
+
+##### Changed
+
+- [#1](https://github.com/jubileesoft/amsel/pull/1) Add to `package.json`: description, repository
+
 ## <span style="color: #0366d6;">0.1.2</span>
 
 Release date: 2020-05-20
