@@ -21,7 +21,7 @@ npm install @jubileesoft/amsel
 ```typescript
 // typescript example
 
-import amsel, { GoogleConfig } from 'amsel';
+import amsel, { GoogleConfig } from '@jubileesoft/amsel';
 
 const config: GoogleConfig = {
   appClientId: 'my-client-id-from-google'
@@ -39,7 +39,7 @@ When you process a client-request in your node backend (e.g. from a REST call or
 ```typescript
 // typescript example 
 
-import { GoogleUser } from 'amsel';
+import { GoogleUser } from '@jubileesoft/amsel';
 
 const user: Promise<GoogleUser | null> = await amsel.verifyAccessTokenFromGoogle(
   req.headers.authorization // should look like "Bearer ...something..."
@@ -70,7 +70,7 @@ So, whenever you get a user object you know that the access token is currently s
 The following example shows how an instance of the [ApolloServer](https://www.apollographql.com/docs/apollo-server/security/authentication/) could be created while putting the user object on the context.
 
 ```typescript
-import amsel from 'amsel';
+import amsel from '@jubileesoft/amsel';
 
 const server = new ApolloServer({
   typeDefs,
