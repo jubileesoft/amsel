@@ -1,7 +1,7 @@
 {
   "name": "@jubileesoft/amsel",
-  "version": "0.1.3",
-  "description": "Verify a Google access token and extract its user object in your node backend.",
+  "version": "0.2.0",
+  "description": "Verify a Google access token or a Microsoft id_token and extract its user object in your node backend.",
   "repository": "github:jubileesoft/amsel",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
