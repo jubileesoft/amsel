@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from 'cross-fetch';
 import { GoogleUser } from '../user/google';
 import { Google, GoogleConfig } from '../config/google';
 
@@ -23,14 +23,11 @@ const verifyAccessTokenFromGoogle = async (
     return null;
   }
 
-  const res = await fetch(Google.tokenInfoUrl + token, {
-    method: 'GET',
-    compress: false,
-  });
+  const res = await fetch(Google.tokenInfoUrl + token);
 
-  const buffer = res.body.read();
-  const text = buffer.toString('utf8');
-  const user: GoogleUser = JSON.parse(text);
+  const user: GoogleUser = await res.json();
+
+  //const user: GoogleUser = JSON.parse(text);
   if (typeof user.aud === 'undefined' || user.aud !== config.appClientId) {
     return null;
   }
